@@ -30,6 +30,7 @@ body {
     opacity: 0;
     transform: translateY(20px) scale(0.88);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(0.88);
@@ -102,6 +103,7 @@ body {
     opacity: 0;
     transform: scaleY(0.5) translateY(-15px);
   }
+
   to {
     opacity: 1;
     transform: scaleY(1) translateY(0);
@@ -294,7 +296,7 @@ body {
   text-shadow: 0 0 12px rgba(255, 209, 92, 0.25);
 }
 
-.student-table td:nth-child(5) {
+.update-box {
   display: flex;
   align-items: center;
   gap: 12px;

@@ -21,7 +21,9 @@ function StudentRow({ serial, student, onUpdateScore }) {
   }
 
   function handleKeyPress(e) {
-    if (e.key === 'Enter') handleUpdate()
+    if (e.key === 'Enter') {
+      handleUpdate()
+    }
   }
 
   const isPassed = student.score >= 40
@@ -39,18 +41,20 @@ function StudentRow({ serial, student, onUpdateScore }) {
       </td>
 
       <td>
-        <input
-          type="number"
-          className="score-input"
-          placeholder="Score"
-          value={inputScore}
-          onChange={(e) => setInputScore(e.target.value)}
-          onKeyDown={handleKeyPress}
-        />
+        <div className="update-box">
+          <input
+            type="number"
+            className="score-input"
+            placeholder="Score"
+            value={inputScore}
+            onChange={(e) => setInputScore(e.target.value)}
+            onKeyDown={handleKeyPress}
+          />
 
-        <button className="btn-add" onClick={handleUpdate}>
-          SAVE
-        </button>
+          <button className="btn-add" onClick={handleUpdate}>
+            SAVE
+          </button>
+        </div>
       </td>
     </tr>
   )
